@@ -5,7 +5,6 @@ namespace DynamicChartApp.Services
 {
     public class DatabaseService : IDatabaseService
     {
- 
         private readonly IConfiguration _configuration;
         public DatabaseService(IConfiguration configuration)
         {

@@ -4,6 +4,6 @@ namespace DynamicChartApp.Services
 {
     public interface IDatabaseService
     {
-              Task<DataTable> ExecuteQueryAsync(string connectionString, string query);
+          Task<DataTable> ExecuteQueryAsync(string connectionString, string query);
     }
 }

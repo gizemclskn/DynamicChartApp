@@ -6,7 +6,6 @@ using System.Data;
 
 namespace DynamicChartApp.Controllers
 {
-    
     [ApiController]
     [Route("api/[controller]")]
     public class DatabaseController : ControllerBase
@@ -17,6 +16,7 @@ namespace DynamicChartApp.Controllers
         {
             _databaseService = databaseService;
         }
+
         [HttpPost("getdata")]
         public async Task<IActionResult> GetData([FromBody] ChartDataRequest request)
         {
@@ -29,10 +29,7 @@ namespace DynamicChartApp.Controllers
                 var responseData = new ChartDataResponse
                 {
                     Labels = new List<string>(),
-                    DataSets = new List<List<object>>
-            {
-                new List<object>()
-            }
+                    DataSets = new List<List<object>> { new List<object>() }
                 };
 
                 // Sütun adlarının eklenmesi
@@ -62,6 +59,5 @@ namespace DynamicChartApp.Controllers
                 return StatusCode(500, "Veritabanına bağlanırken bir hata oluştu.");
             }
         }
-
     }
 }
